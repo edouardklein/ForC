@@ -1,4 +1,0 @@
-ForC
-====
-
-Mathematical FORmalism Checker
