@@ -1,0 +1,45 @@
+A Markov Decision process (MDP) is a tuple
+$\{\s,\A,\p,\R,\gamma\}$ where $\s$ is the finite state
+space, $\A$ the finite actions space, $\p =
+\{P_a = (p(s'|s,a))_{1\leq s,s'\leq |\s|}, a\in\A\}$ the set of
+Markovian transition probabilities, $\R\in\mathbb{R}^\s$ the
+state-dependent reward function and $\gamma$ the discount factor. A
+deterministic policy $\pi\in\s^\A$ defines the behavior of an agent.
+The quality of this control is quantified by the value function
+$v_\R^\pi\in\mathbb{R}^\s$, associating to each state the cumulative
+discounted reward for starting in this state and following the
+policy $\pi$ afterwards: $v_\R^\pi(s) = \E[\sum_{t\geq 0} \gamma^t
+\R(S_t)|S_0=s,\pi]$. An optimal policy $\pi_\R^*$ (according to the
+reward function $\R$) is a policy of associated value function
+$v^*_\R$ satisfying $v_\R^* \geq v_\R^\pi$, for any policy $\pi$ and
+componentwise.
+
+Let $P_\pi$ be the stochastic matrix $P_\pi =
+(p(s'|s,\pi(s)))_{1\leq s,s'\leq |\s|}$. With a slight abuse of
+notation, we may write $a$ the policy which associates the action
+$a$ to each state $s$. The Bellman evaluation (resp. optimality)
+operators $T^\pi_\R$ (resp. $T^*_\R$) $:\mathbb{R}^\s
+\rightarrow \mathbb{R}^\s$ are defined as $T^\pi_\R v = \R + \gamma
+P_\pi v$ and $T_\R^*v = \max_\pi T_\R^\pi v$.
+
+These operators are contractions and $v_\R^\pi$ and $v^*_\R$ are
+their respective fixed-points: $v_\R^\pi = T^\pi_\R v_\R^\pi$ and
+$v^*_\R = T^*_\R v^*_\R$. The action-value function
+$Q^\pi\in\mathbb{R}^{\s\times \A}$ adds a degree of freedom on the
+choice of the first action, it is formally defined as $Q_\R^\pi(s,a)
+= [T^a_\R v^\pi_\R](s)$. We also write $\rho_\pi$ the stationary
+distribution of the policy $\pi$ (satisfying $\rho_\pi^\top P_\pi =
+\rho_\pi^\top$).
+
+[...]
+
+Similarly to the direct problem, the state space may be too large
+for the reward function to admit a practical exact representation.
+Therefore, we restrict our search of a good reward among linearly
+parameterized functions. Let $\phi(s) = (\phi_1(s)  \dots
+\phi_p(s))^\top$
+be a feature vector composed of $p$ basis function
+$\phi_i\in\mathbb{R}^\s$, we define the  parameterized reward
+functions as $\R_\theta(s) = \theta^\top \phi(s) = \sum_{i=1}^p
+\theta_i \phi_i(s)$.
+

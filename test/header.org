@@ -1,0 +1,14 @@
+#+LATEX_HEADER:\newcommand{\p}{\mathcal{P}}
+#+LATEX_HEADER:\newcommand{\R}{\mathcal{R}}
+#+LATEX_HEADER:\newcommand{\s}{\mathcal{S}}
+#+LATEX_HEADER:\newcommand{\A}{\mathcal{A}}
+#+LATEX_HEADER:\newcommand{\X}{\mathcal{X}}
+#+LATEX_HEADER:\newcommand{\Y}{\mathcal{Y}}
+#+LATEX_HEADER:\newcommand{\D}{\mathcal{D}}
+#+LATEX_HEADER:\newcommand{\T}{\mathcal{T}}
+#+LATEX_HEADER:\newcommand{\lc}{\mathcal{L}}
+#+LATEX_HEADER:\newcommand{\E}{\mathbb{E}}
+#+LATEX_HEADER:\newcommand{\prob}{\mathbb{P}}
+#+LATEX_HEADER:\newcommand{\Mu}{\boldsymbol{\mu}}
+
+
