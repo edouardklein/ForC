@@ -36,12 +36,19 @@ def p_math_expression_composition(p):
 #Should be automatically generated : more complex than a single lexical token
 def p_math_expression_PROB_MATRIX(p): #Auto
     'math_expression : PROB_MATRIX SUBSCRIPT ACTION' #after ':' user
-    p[0] = p[1] + p[2] + p[3] #Auto
+    i = 1
+    p[0] = ''
+    while True:
+        try:
+            p[0] += p[i]
+            i+=1
+        except IndexError:
+            break
     if not "PROB_MATRIX" in parser.dic:
         parser.dic["PROB_MATRIX"] = [r'$P_x$ with $x$ and action or policy',#That last string : user
                                      'Probability transition matrix for an action or a policy', #user
                                      r'\ref{FORC_PROB_MATRIX}']
-        parser.dollar_label_stack.append("FORC_PROB_MATRIX")
+        parser.dollar_label_stack.append('FORC_PROB_MATRIX')
     
 #should be automatically generated : all tokens that are OK by themselves (whether they come from the user or from the basic tokens does not matter)
 def p_math_expression_tokens(p):
