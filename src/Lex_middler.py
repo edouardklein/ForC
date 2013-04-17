@@ -1,6 +1,10 @@
 )
 
 #ORG_MODE tokens
+def t_ORG_COMMENT(t):
+    r'[^\S\n]*\#.*\n'
+    t.lexer.lineno += 1
+    return t
 def t_ORG_ACTUAL_DOLLAR(t):
     r'\\\$'
     return t
@@ -12,8 +16,11 @@ def t_ORG_DOLLAR(t):
     t.lexer.begin('MATH')
     return t
 def t_ORG_TEXT(t):
-    r'[^\$\\]+'
+    r'[^\$\n\\]+'
     return t
+def t_ORG_newline(t):
+    r'\n+'
+    t.lexer.lineno += len(t.value)
 #Lexer-mechanics MATH token
 def t_MATH_DOLLAR(t):
     r'\$'
@@ -48,6 +55,9 @@ def t_MATH_EQUAL(t):
     return t
 def t_MATH_SUBSCRIPT(t):
     r'_'
+    return t
+def t_MATH_EXPONENT(t):
+    r'\^'
     return t
 def t_MATH_DASH(t):
     r"'"

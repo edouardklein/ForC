@@ -98,7 +98,7 @@ MATH_TOKENS= ['PAREN',
               'LEQ',
               'NUMBER',
               'IN', #All above copied from Lexer_header.py
-              ] + list(parser.dic_dl.keys())
+              ] + list(parser.dic_dl.keys()) + list(parser.dic_g.keys())
 if sys.argv[2]=='parser':
     print(TOKENS_RULE_TEMPLATE.format(tokens="\n\t\t| ".join(MATH_TOKENS)))
 

@@ -1,10 +1,10 @@
 A Markov Decision process (MDP) is a tuple
-$\{\s,\A,\p,\R,\gamma\}$ where 
+$\{\s,\A,\p ,\R,\gamma\}$ where 
 #?dl STATE_SPACE '\\s' '$\s$' 'State space'
 $\s$ is the finite statespace, 
 #?dl ACTION_SPACE '\\A' '$\A$' 'Action space'
 $\A$ the finite actions space,
-#?dl PROB_SET '\\p' '$\p$' 'Transition probabilies'
+#?dl PROB_SET '\\p\s' '$\p$' 'Transition probabilies'
 #?dl STATE 's' '$s$' 'A state'
 #?dl ACTION 'a' '$a$' 'An action'
 #?g g_STATE 'STATE | STATE DASH'
@@ -13,10 +13,11 @@ $\A$ the finite actions space,
  $\p =\{P_a = (p(s'|s,a))_{1\leq s,s'\leq |\s|}, a\in\A\}$ the set of
 Markovian transition probabilities,
 #?dl REWARD_FUNC '\\R' '$\R$' 'Reward function'
+#?dl REALS '\\mathbb\{R\}' '$\mathbb{R}$' 'The reals'
  $\R\in\mathbb{R}^\s$ the state-dependent reward function and 
 #?dl GAMMA '\\gamma' '$\gamma$' 'Discount factor'
 #?l l_PROB_MATRIX 'P'
-#?dg PROB_MATRIX 'l_PROB_MATRIX SUBSCRIPT ACTION | l_PROB_MATRIX SUBSCRIPT POLICY' '$P_x$ with $x$ and action or policy'  'Probability transition matrix for an action or a policy'
+#?dg PROB_MATRIX 'l_PROB_MATRIX SUBSCRIPT ACTION | l_PROB_MATRIX SUBSCRIPT POLICY' '$P_x$ with $x$ an action or policy'  'Probability transition matrix for an action or a policy'
 $\gamma$ the discount factor. A
 deterministic policy 
 #?dl POLICY '\\pi' '$\pi$' 'A policy'

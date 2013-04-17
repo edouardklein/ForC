@@ -14,7 +14,8 @@ def p_expression_org_special_text(p):
     p[0] = p[1] + p[2]
 
 def p_expression_text_composition(p):
-    'expression : expression TEXT'
+    '''expression : expression TEXT
+                  | expression COMMENT'''
     p[0] = p[1]+p[2]
 #Maths-rules
 def p_expression_enclosed_math(p):
