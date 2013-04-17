@@ -91,13 +91,10 @@ MATH_TOKENS= ['PAREN',
               'COMMA',
               'BLANK',
               'EQUAL',
-              'SUBSCRIPT',
-              'DASH',
               'KNOWING',
-              'LATEX_IGNORE',
               'LEQ',
               'NUMBER',
-              'IN', #All above copied from Lexer_header.py
+              'IN', #All above copied from Lexer_header.py in accordance with the table in README
               ] + list(parser.dic_dl.keys()) + list(parser.dic_g.keys())
 if sys.argv[2]=='parser':
     print(TOKENS_RULE_TEMPLATE.format(tokens="\n\t\t| ".join(MATH_TOKENS)))
