@@ -8,13 +8,28 @@ states = (
 
 tokens = (
     'TEXT',
-    'SHEBANG',
+    'SHEBANG_l',
+    'SHEBANG_dl',
+    'SHEBANG_g',
+    'SHEBANG_dg',
     'NAME',
     'ELEMENT',
 )
 
-def t_ORG_SHEBANG(t):
-    r'\#\?(l|g|dl|dg)'
+def t_ORG_SHEBANG_l(t):
+    r'\#\?l'
+    lexer.begin('FORC')
+    return t
+def t_ORG_SHEBANG_dl(t):
+    r'\#\?dl'
+    lexer.begin('FORC')
+    return t
+def t_ORG_SHEBANG_g(t):
+    r'\#\?g'
+    lexer.begin('FORC')
+    return t
+def t_ORG_SHEBANG_dg(t):
+    r'\#\?dg'
     lexer.begin('FORC')
     return t
 def t_ORG_TEXT(t):
