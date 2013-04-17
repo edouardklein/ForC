@@ -9,6 +9,7 @@ tokens = (
     'BACKSLASH',
     'ACTUAL_DOLLAR',
     'TEXT',
+    'newline',
     'COMMENT',
     'DOLLAR',
     'PAREN',

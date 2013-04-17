@@ -21,6 +21,7 @@ def t_ORG_TEXT(t):
 def t_ORG_newline(t):
     r'\n+'
     t.lexer.lineno += len(t.value)
+    return t
 #Lexer-mechanics MATH token
 def t_MATH_DOLLAR(t):
     r'\$'

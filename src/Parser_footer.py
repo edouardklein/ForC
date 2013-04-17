@@ -6,7 +6,7 @@ def p_error(p):
 parser = yacc.yacc(debug=True)
 parser.dic = {}
 parser.dollar_label_stack = []
-parser.parse(open(sys.argv[1]).read(),debug=0)
+print(parser.parse(open(sys.argv[1]).read(),debug=0))
 
 print("* Notation table")
 print("| *Symbol* | *Meaning* | *Defined* |")

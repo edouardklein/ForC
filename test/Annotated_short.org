@@ -1,3 +1,5 @@
+* Some title
+** Some subtitle
 A Markov Decision process (MDP) is a tuple
 $\{\s,\A,\p ,\R,\gamma\}$ where 
 #?dl STATE_SPACE '\\s' '$\s$' 'State space'
@@ -21,8 +23,9 @@ Markovian transition probabilities,
 #?dl GAMMA '\\gamma' '$\gamma$' 'Discount factor'
 #?l l_PROB_MATRIX 'P'
 #?dg PROB_MATRIX 'l_PROB_MATRIX SUBSCRIPT ACTION | l_PROB_MATRIX SUBSCRIPT POLICY' '$P_x$ with $x$ an action or policy'  'Probability transition matrix for an action or a policy'
-$\gamma$ the discount factor. A
-deterministic policy 
+$\gamma$ the discount factor.
+** Some other subtitle
+A deterministic policy 
 #?dl POLICY '\\pi' '$\pi$' 'A policy'
 $\pi\in\s^\A$ defines the behavior of an agent.
 
