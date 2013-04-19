@@ -1,5 +1,5 @@
 TABLE_BUILDER_BUILDER=python3 ForC_parser.py
-TEST_FILE=Annotated_short.org
+TEST_FILE=Annotated.org
 
 test:
 	${TABLE_BUILDER_BUILDER} ${TEST_FILE} lexer1 > tmp1.py #Building the table builder

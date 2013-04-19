@@ -10,5 +10,6 @@
 #+LATEX_HEADER:\newcommand{\E}{\mathbb{E}}
 #+LATEX_HEADER:\newcommand{\prob}{\mathbb{P}}
 #+LATEX_HEADER:\newcommand{\Mu}{\boldsymbol{\mu}}
+#+LATEX_HEADER:\newcommand{\card}[1]{|#1|}
 
 

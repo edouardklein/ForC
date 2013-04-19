@@ -1,3 +1,4 @@
+* Notation Section
 A Markov Decision process (MDP) is a tuple
 $\{\s,\A,\p,\R,\gamma\}$ where $\s$ is the finite state
 space, $\A$ the finite actions space, $\p =
@@ -31,7 +32,7 @@ choice of the first action, it is formally defined as $Q_\R^\pi(s,a)
 distribution of the policy $\pi$ (satisfying $\rho_\pi^\top P_\pi =
 \rho_\pi^\top$).
 
-[...]
+* A bit further in the paper
 
 Similarly to the direct problem, the state space may be too large
 for the reward function to admit a practical exact representation.

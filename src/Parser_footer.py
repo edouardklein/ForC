@@ -1,6 +1,6 @@
 # Error rule for syntax errors
 def p_error(p):
-    print("Error line "+str(p.lineno))
+    print("Error line "+str(p.lineno),file=sys.stderr)
 
 # Build the parser
 parser = yacc.yacc(debug=True)

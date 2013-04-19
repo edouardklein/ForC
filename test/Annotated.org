@@ -1,22 +1,47 @@
+* Notation Section
 A Markov Decision process (MDP) is a tuple
 $\{\s,\A,\p,\R,\gamma\}$ where 
-#?d \\s \s State space
-$\s$ is the finite statespace, 
-#?d \\A \A Action space
-$\A$ the finite actions space,
-#?d \\p \p Transition probabiliy function
- $\p =\{P_a = (p(s'|s,a))_{1\leq s,s'\leq |\s|}, a\in\A\}$ the set of
+#?dl STATE_SPACE '\\s' '$\s$' 'State space'
+$\s$ is the finite state
+space, 
+#?dl ACTION_SPACE '\\A' '$\A$' 'Action space'
+$\A$ the finite actions space, 
+#?dl PROB_SET '\\p\s' '$\p$' 'Transition probabilies'
+#?dl STATE '[sS]' '$s$ or $S$' 'A state'
+#?dl ACTION 'a' '$a$' 'An action'
+#?g g_STATE 'STATE | STATE DASH | STATE SUBSCRIPT T | STATE SUBSCRIPT NUMBER'
+#?dl PROB_FUNC 'p' '$p$' 'Transition probability function'
+#?g PROB_FUNC_EVALUATED 'PROB_FUNC PAREN g_STATE KNOWING g_STATE COMMA ACTION PAREN'
+#?dg MATRIX_BY_TERMS 'PAREN math_expression PAREN SUBSCRIPT LATEX_IGNORE math_expression LATEX_IGNORE' '$(x_{i,j})_{i,j}$' 'Defining a matrix by its general term'
+#?l l_CARD '\\card'
+#?dg CARDINALITY 'l_CARD LATEX_IGNORE SET LATEX_IGNORE' '$|X|$' 'Cardinality of set $X$'
+$\p = \{P_a = (p(s'|s,a))_{1\leq s,s'\leq \card{\s}}, a\in\A\}$ the set of
 Markovian transition probabilities,
-#?d \\R \R Reward function
- $\R\in\mathbb{R}^\s$ the state-dependent reward function and 
-#?d \\gamma \gamma Discount factor
-$\gamma$ the discount factor. A
-deterministic policy $\pi\in\s^\A$ defines the behavior of an agent.
+#?dl REWARD_FUNC '\\R' '$\R$' 'Reward function'
+#?dl REALS '\\mathbb\{R\}' '$\mathbb{R}$' 'The reals'
+#?g SET 'REALS | STATE_SPACE | ACTION_SPACE'
+#?dg FUNCTIONS_TWO_SETS 'SET EXPONENT SET' '$B^A$' 'The set of functions from $A$ to $B$.'
+ $\R\in\mathbb{R}^\s$ the state-dependent reward function and
+#?dl GAMMA '\\gamma' '$\gamma$' 'Discount factor'
+#?l l_PROB_MATRIX 'P'
+#?dg PROB_MATRIX 'l_PROB_MATRIX SUBSCRIPT ACTION | l_PROB_MATRIX SUBSCRIPT POLICY' '$P_x$ with $x$ an action or policy'  'Probability transition matrix for an action or a policy'
+$\gamma$ the discount factor. A deterministic policy
+#?dl POLICY '\\pi' '$\pi$' 'A policy'
+$\pi\in\s^\A$ defines the behavior of an agent.
 The quality of this control is quantified by the value function
+#?l l_V 'v'
+#?dg VALUE_FUNCTION 'l_V SUBSCRIPT REWARD_FUNC EXPONENT POLICY' '$v_R^\pi$' 'Value function of $\pi$ with respect to reward $R$'
 $v_\R^\pi\in\mathbb{R}^\s$, associating to each state the cumulative
 discounted reward for starting in this state and following the
-policy $\pi$ afterwards: $v_\R^\pi(s) = \E[\sum_{t\geq 0} \gamma^t
-\R(S_t)|S_0=s,\pi]$. An optimal policy $\pi_\R^*$ (according to the
+policy $\pi$ afterwards: 
+#?l l_E '\\E'
+#?dg EXPECTATION 'l_E BRACKET math_expression KNOWING math_expression BRACKET' '$\E[f(x)|x]$' 'Expected value $f(x)$ over the trajectories in the MDP knowing $x$'
+#?dl T 't' '$t$' 'Timestep in an MDP'
+#?g PI_EVAL 'POLICY PAREN g_STATE PAREN'
+#?g V_EVAL 'VALUE_FUNCTION PAREN g_STATE PAREN'
+#?g R_EVAL 'REWARD_FUNC PAREN g_STATE PAREN'
+$v_\R^\pi(s) = \E[\sum_{t\geq 0}^{ } \gamma^t\R(S_t)|S_0=s,\pi]$.
+An optimal policy $\pi_\R^*$ (according to the
 reward function $\R$) is a policy of associated value function
 $v^*_\R$ satisfying $v_\R^* \geq v_\R^\pi$, for any policy $\pi$ and
 componentwise.
@@ -38,7 +63,7 @@ choice of the first action, it is formally defined as $Q_\R^\pi(s,a)
 distribution of the policy $\pi$ (satisfying $\rho_\pi^\top P_\pi =
 \rho_\pi^\top$).
 
-[...]
+* A bit further in the paper
 
 Similarly to the direct problem, the state space may be too large
 for the reward function to admit a practical exact representation.

@@ -61,10 +61,10 @@ functions as $\R_\theta(s) = \theta^\top \phi(s) = \sum_{i=1}^p
 \theta_i \phi_i(s)$.
 
 * Documentation
-| X                                          | In the table | Not in the table (silent)      |
-|--------------------------------------------+--------------+--------------------------------|
-| Stand-alone                                | dl dg        | g()[] =$\leq$, numbers $\in$   |
-|--------------------------------------------+--------------+--------------------------------|
-| Composite (can not be used alone in a doc, |              | l subscripts exponents LaTeX{} |
-| there must exist a grammar rule using it)  |              |                                |
-|                                            |              |                                |
+| X                                          | In the table | Not in the table (silent)                 |
+|--------------------------------------------+--------------+-------------------------------------------|
+| Stand-alone                                | dl dg        | g{} =$\leq$, numbers $\in$ $\sum^A_B$     |
+|--------------------------------------------+--------------+-------------------------------------------|
+| Composite (can not be used alone in a doc, |              | l subscripts exponents LaTeX{} [] () PIPE |
+| there must exist a grammar rule using it)  |              |                                           |
+|                                            |              |                                           |

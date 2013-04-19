@@ -14,6 +14,7 @@ tokens = (
     'DOLLAR',
     'PAREN',
     'BRACE',
+    'BRACKET',
     'COMMA',
     'BLANK',
     'EQUAL',
@@ -25,4 +26,5 @@ tokens = (
     'LEQ',
     'NUMBER',
     'IN',
+    'SUM',
 

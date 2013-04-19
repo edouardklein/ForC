@@ -45,6 +45,9 @@ def t_MATH_PAREN(t):
 def t_MATH_BRACE(t):
     r'\\\{|\\\}'
     return t
+def t_MATH_BRACKET(t):
+    r'\[|\]'
+    return t
 def t_MATH_COMMA(t):
     r','
     return t
@@ -74,5 +77,8 @@ def t_MATH_LEQ(t):
     return t
 def t_MATH_IN(t):
     r'\\in'
+    return t
+def t_MATH_SUM(t):
+    r'\\sum'
     return t
 

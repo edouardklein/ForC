@@ -31,4 +31,10 @@ def p_expression_enclosed_math(p):
 def p_math_expression_composition(p):
     'math_expression : math_expression math_expression'
     p[0] = p[1] + p[2]
-
+#Conventional MATH grammar rules
+def p_math_expression_sum(p):
+    'math_expression : SUM SUBSCRIPT LATEX_IGNORE math_expression LATEX_IGNORE EXPONENT LATEX_IGNORE math_expression LATEX_IGNORE'
+    p[0] =  p[1] + p[2] + p[3] + p[4] + p[5] + p[6] + p[7] + p[8] + p[9]
+def p_math_power(p):
+    'math_expression : math_expression EXPONENT math_expression'
+    p[0] =  p[1] + p[2] + p[3] 

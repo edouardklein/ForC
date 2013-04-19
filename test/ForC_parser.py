@@ -86,12 +86,10 @@ def p_math_expression_tokens(p):
     \'\'\'math_expression : {tokens}\'\'\'
     p[0] = p[1]
 '''
-MATH_TOKENS= ['PAREN',
-              'BRACE',
+MATH_TOKENS= ['BRACE',
               'COMMA',
               'BLANK',
               'EQUAL',
-              'KNOWING',
               'LEQ',
               'NUMBER',
               'IN', #All above copied from Lexer_header.py in accordance with the table in README
